@@ -12,6 +12,10 @@ h1 {
   font-size: 75px;
 }
 
+.col {
+  max-width: 750px;
+}
+
 .card {
   background: lightgreen;
   border-radius: 20px;
