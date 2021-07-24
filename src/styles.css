@@ -59,9 +59,20 @@ p.high-low {
   font-size: 30px;
 }
 
-p.signature {
+button.signature {
   color: blue;
   font-weight: 500;
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 15px;
+  border: 5px solid blue;
+  background: linear-gradient(
+    89.9deg,
+    rgb(208, 246, 255) 0.1%,
+    rgb(255, 237, 237) 47.9%,
+    rgb(255, 255, 231) 100.2%
+  );
 }
 
 #city-name,
