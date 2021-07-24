@@ -65,7 +65,8 @@ p.signature {
 }
 
 #city-name,
-#current-data,
+#wind-read,
+#humidity-read,
 #read-out {
   color: blue;
   background: linear-gradient(
@@ -86,9 +87,11 @@ p.signature {
   border-right: 5px solid blue;
 }
 
-#current-data {
+#wind-read,
+#humidity-read {
   border-left: 5px solid blue;
   border-right: 5px solid blue;
+  color: blue;
 }
 
 #read-out {
@@ -99,4 +102,10 @@ p.signature {
   border-bottom-right-radius: 15px;
   font-family: "Train One", cursive;
   font-size: 100px;
+}
+
+h3.permanent-lead,
+#current-data {
+  color: blue;
+  text-align: center;
 }

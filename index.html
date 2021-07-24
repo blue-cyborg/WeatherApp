@@ -2,124 +2,135 @@
 <html>
 
 <head>
-    <title>🌈Your Five Day Forecast🌞</title>
+  <title>🌈Your Five Day Forecast🌞</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="src/styles.css">
-    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/styles.css"> 
+  <meta charset="UTF-8" />
 </head>
 
 <body>
-    <div class="container">
-        <h1>
-            🌈Your Five Day Forecast🌞
-        </h1>
-        <div class="card">
+  <div class="container">
+    <h1>
+    🌈Your Five Day Forecast🌞
+    </h1>
+     <div class="card">
+       <div class="card-body">
+         <form id="search-city">
+           <div class="form-group">
+            <input 
+            type="text" 
+            id="city-input"
+            placeholder="Enter your city or zip code" 
+            class="form-control" 
+            autofocus 
+            />
+          <input type="submit" value="Search" class="btn btn-primary" />
+          <button type="button" id="your-location" class="btn btn-warning">📍 My Current Location</button>
+         </form>
+     <br />
+     <br /> 
+     <h3 class = permanent-lead>
+        Your current date and time is
+     </h3>
+    <h3 id="current-data">
+          .
+        </h3> 
+      <div class="row">
+        <div class="col">
+        <h2 id="city-name">
+          Tell me your city
+        </h2>
+        <h3 id="humidity-read">
+          humidity 
+        </h3>
+        <h3 id="wind-read">
+            wind 
+          </h3>
+        <p id="read-out">
+          °F
+        </p>
+        </div>
+        <br />
+        <br />
+        <div class="col">
+        <p class="weather-visual">
+        ☔
+       </p>
+    </div>
+    </div>
+    <hr />
+      <div class="card1">
+        <div class="card-body">
+          <h3 class="day">
+          Monday
+        </h3>
+        <p class="high-low">
+          <strong>High°</strong> /Low°
+        </p>
+        <p class="forecast-visual">
+          ☔
+        </div>
+      </div>
+      <br />
+      <div class="card1">
+          <div class="card-body">
+            <h3 class="day">
+            Tuesday
+          </h3>
+          <p class="high-low">
+            <strong>High°</strong> /Low°
+          </p>
+          <p class="forecast-visual">
+            ☔
+          </div>
+        </div>
+        <br />
+        <div class="card1">
             <div class="card-body">
-                <form id="search-city">
-                    <div class="form-group">
-                        <input type="text" id="city-input" placeholder="Enter your city or zip code"
-                            class="form-control" autofocus />
-                        <input type="submit" value="Search" class="btn btn-primary" />
-                        <button type="button" id="your-location" class="btn btn-warning">📍 My Current Location</button>
-                </form>
-                <br />
-                <br />
-                <button type="button" id="temp-f" class="btn btn-primary">°f</button>
-                <button type="button" id="temp-c" class="btn btn-primary">°c</button>
-                <br />
-                <div class="row">
-                    <div class="col">
-                        <h2 id="city-name">
-                            Tell me your city
-                        </h2>
-                        <h3 id="current-data">
-                            .
-                        </h3>
-                        <p id="read-out">
-                            °f
-                        </p>
-                    </div>
-                    <br />
-                    <br />
-                    <div class="col">
-                        <p class="weather-visual">
-                            ☔
-                        </p>
-                    </div>
-                </div>
-                <hr />
-                <div class="card1">
-                    <div class="card-body">
-                        <h3 class="day">
-                            Monday
-                        </h3>
-                        <p class="high-low">
-                            <strong>High°</strong> /Low°
-                        </p>
-                        <p class="forecast-visual">
-                            ☔
-                    </div>
-                </div>
-                <br />
-                <div class="card1">
-                    <div class="card-body">
-                        <h3 class="day">
-                            Tuesday
-                        </h3>
-                        <p class="high-low">
-                            <strong>High°</strong> /Low°
-                        </p>
-                        <p class="forecast-visual">
-                            ☔
-                    </div>
-                </div>
-                <br />
-                <div class="card1">
-                    <div class="card-body">
-                        <h3 class="day">
-                            Wednesday
-                        </h3>
-                        <p class="high-low">
-                            <strong>High°</strong> /Low°
-                        </p>
-                        <p class="forecast-visual">
-                            ☔
-                    </div>
-                </div>
-                <br />
-                <div class="card1">
-                    <div class="card-body">
-                        <h3 class="day">
-                            Thursday
-                        </h3>
-                        <p class="high-low">
-                            <strong>High°</strong> /Low°
-                        </p>
-                        <p class="forecast-visual">
-                            ☔
-                    </div>
-                </div>
-                <br />
-                <div class="card1">
-                    <div class="card-body">
-                        <h3 class="day">
-                            Friday
-                        </h3>
-                        <p class="high-low">
-                            <strong>High°</strong> /Low°
-                        </p>
-                        <p class="forecast-visual">
-                            ☔
-                    </div>
-                </div>
-                <p class=signature>
-                    Coded By: Candice Drave
-                </p>
+              <h3 class="day">
+              Wednesday
+            </h3>
+            <p class="high-low">
+              <strong>High°</strong> /Low°
+            </p>
+            <p class="forecast-visual">
+              ☔
             </div>
-            <script src="src/script.js"></script>
-</body>
-</html>
+          </div>
+          <br />
+          <div class="card1">
+              <div class="card-body">
+                <h3 class="day">
+                Thursday
+              </h3>
+              <p class="high-low">
+                <strong>High°</strong> /Low°
+              </p>
+              <p class="forecast-visual">
+                ☔
+              </div>
+            </div>
+            <br />
+            <div class="card1">
+                <div class="card-body">
+                  <h3 class="day">
+                  Friday
+                </h3>
+                <p class="high-low">
+                  <strong>High°</strong> /Low°
+                </p>
+                <p class="forecast-visual">
+                  ☔
+                </div>
+              </div>
+              <p class=signature>
+                  Coded By: Candice Drave
+              </p>
+  </div>
+  <script src="src/script.js"></script>
+  </body>
+  </html>

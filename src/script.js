@@ -1,5 +1,4 @@
-//show current day of week and time in the gradient area.
-//week 4 homework outcome
+//This is for putting the current date and time in the gradient display.
 let now = new Date();
 
 let days = [
@@ -12,42 +11,71 @@ let days = [
   "Saturday"
 ];
 
+let months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December"
+];
+
 let day = days[now.getDay()];
-let hour = now.getHours();
-let minute = now.getMinutes();
+let currentMonth = months[now.getMonth()];
+let currentDate = now.getDate();
+let currentYear = now.getFullYear();
+let time = now.toLocaleTimeString("en-US", {
+  hour: "2-digit",
+  minute: "2-digit"
+});
 let dateTime = document.querySelector("#current-data");
-dateTime.innerHTML = `Your current time is ${day} ${hour}:${minute}`;
+dateTime.innerHTML = `${day}, ${currentMonth} ${currentDate} ${currentYear}, ${time}`;
 
 //Begin search engine section
 //This is what I want to do with that api call.
 //I want to alter the display to give the results of the call.
 function alterDisplayWindows(response) {
+  console.log(response.data.name);
+  document.querySelector("#city-name").innerHTML = response.data.name;
   let temp = Math.round(response.data.main.temp);
   console.log(temp);
   let displayMyTemp = document.querySelector("#read-out");
   displayMyTemp.innerHTML = `${temp}°F`;
 
-  let currentConditions = document.querySelector("p.weather-visual");
-  currentConditions.innerHTML = response.data.weather.description;
+  let humid = response.data.main.humidity;
+  console.log(humid);
+  let displayMyHumidity = document.querySelector("#humidity-read");
+  displayMyHumidity.innerHTML = `humidity: ${humid}`;
 
-  let weatherVisual = document.querySelector("p.weather-visual");
+  let wind = Math.round(response.data.wind.speed);
+  console.log(wind);
+  let displayMyWindsp = document.querySelector("#wind-read");
+  displayMyWindsp.innerHTML = `wind speed: ${wind} km/h`;
+
+  let locationVisual = document.querySelector("p.weather-visual");
   if (response.data.weather[0].main === "Clear") {
-    currentConditions.innerHTML = "🌞";
+    locationVisual.innerHTML = "🌞";
   }
   if (response.data.weather[0].main === "Clouds") {
-    currentConditions.innerHTML = "⛅";
+    locationVisual.innerHTML = "⛅";
   }
   if (response.data.weather[0].main === "Drizzle") {
-    currentConditions.innerHTML = "☂️";
+    locationVisual.innerHTML = "☂️";
   }
   if (response.data.weather[0].main === "Thunderstorm") {
-    currentConditions.innerHTML = "⛈️";
+    locationVisual.innerHTML = "⛈️";
   }
   if (response.data.weather[0].main === "Rain") {
-    currentConditions.innerHTML = "☂️";
+    locationVisual.innerHTML = "☂️";
   }
   if (response.data.weather[0].main === "Snow") {
-    currentConditions.innerHTML = "❄️";
+    locationVisual.innerHTML = "❄️";
   }
 }
 //Step 2
@@ -70,6 +98,8 @@ function searchEngine(event) {
 let searchButton = document.querySelector("#search-city");
 searchButton.addEventListener("submit", searchEngine);
 
+//end search engine button info
+
 //The My Current Location Button
 function displayHometown(response) {
   let lonLatTemp = document.querySelector("#read-out");
@@ -80,10 +110,19 @@ function displayHometown(response) {
   let geoCity = document.querySelector("#city-name");
   geoCity.innerHTML = `${yourLocation}`;
 
+  let humid = response.data.main.humidity;
+  console.log(humid);
+  let displayMyHumidity = document.querySelector("#humidity-read");
+  displayMyHumidity.innerHTML = `humidity: ${humid}`;
+
+  let wind = Math.round(response.data.wind.speed);
+  console.log(wind);
+  let displayMyWindsp = document.querySelector("#wind-read");
+  displayMyWindsp.innerHTML = `wind speed: ${wind} km/h`;
+
   let currentConditions = document.querySelector("p.weather-visual");
   currentConditions.innerHTML = response.data.weather.description;
 
-  let locationVisual = document.querySelector("p.weather-visual");
   if (response.data.weather[0].main === "Clear") {
     currentConditions.innerHTML = "🌞";
   }
@@ -117,21 +156,4 @@ function getMyLocation() {
 
 let currentLocation = document.querySelector("#your-location");
 currentLocation.addEventListener("click", getMyLocation);
-//the f button
-//week 4 homework outcome
-function fahrenheit(event) {
-  event.preventDefault();
-  let giveF = document.querySelector("#read-out");
-  giveF.innerHTML = `77°f`;
-}
-let tempF = document.querySelector("#temp-f");
-tempF.addEventListener("click", fahrenheit);
-//the c button
-//week 4 homework outcome
-function celsius(event) {
-  event.preventDefault();
-  let giveC = document.querySelector("#read-out");
-  giveC.innerHTML = `25°c`;
-}
-let tempC = document.querySelector("#temp-c");
-tempC.addEventListener("click", celsius);
+//end of geolocation section
