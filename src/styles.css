@@ -7,9 +7,13 @@ body {
 
 h1 {
   font-family: "Train One", cursive;
-  color: blue;
+  color: #004c95;
   text-align: center;
   font-size: 75px;
+}
+
+hr {
+  border: 3px solid #0074e4;
 }
 
 .col {
@@ -17,7 +21,7 @@ h1 {
 }
 
 .card {
-  background: lightgreen;
+  background: #e5ffe5;
   border-radius: 20px;
   padding: 10px 60px;
 }
@@ -25,12 +29,12 @@ h1 {
 .card1 {
   background: #fffbef;
   border-radius: 15px;
-  border: 5px solid blue;
+  border: 5px solid #29caff;
   padding: 10px 60px;
 }
 
 .container {
-  border: 5px solid blue;
+  border: 5px solid #29caff;
   border-radius: 20px;
 }
 
@@ -38,7 +42,7 @@ p.weather-visual {
   background: #fffbef;
   font-size: 167px;
   text-align: center;
-  border: 5px solid blue;
+  border: 5px solid #29caff;
   border-radius: 15px;
 }
 
@@ -52,7 +56,7 @@ h3.day,
 p.high-low,
 p.forecast-visual {
   text-align: center;
-  color: blue;
+  color: #004c95;
 }
 
 h3.day {
@@ -64,13 +68,13 @@ p.high-low {
 }
 
 button.signature {
-  color: blue;
+  color: #004c95;
   font-weight: 500;
   display: block;
   margin: 0 auto;
   padding: 20px;
   border-radius: 15px;
-  border: 5px solid blue;
+  border: 5px solid #29caff;
   background: linear-gradient(
     89.9deg,
     rgb(208, 246, 255) 0.1%,
@@ -83,7 +87,7 @@ button.signature {
 #wind-read,
 #humidity-read,
 #read-out {
-  color: blue;
+  color: #004c95;
   background: linear-gradient(
     89.9deg,
     rgb(208, 246, 255) 0.1%,
@@ -97,22 +101,22 @@ button.signature {
 #city-name {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  border-top: 5px solid blue;
-  border-left: 5px solid blue;
-  border-right: 5px solid blue;
+  border-top: 5px solid #29caff;
+  border-left: 5px solid #29caff;
+  border-right: 5px solid #29caff;
 }
 
 #wind-read,
 #humidity-read {
-  border-left: 5px solid blue;
-  border-right: 5px solid blue;
-  color: blue;
+  border-left: 5px solid #29caff;
+  border-right: 5px solid #29caff;
+  color: #004c95;
 }
 
 #read-out {
-  border-left: 5px solid blue;
-  border-right: 5px solid blue;
-  border-bottom: 5px solid blue;
+  border-left: 5px solid #29caff;
+  border-right: 5px solid #29caff;
+  border-bottom: 5px solid #29caff;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   font-family: "Train One", cursive;
@@ -121,6 +125,6 @@ button.signature {
 
 h3.permanent-lead,
 #current-data {
-  color: blue;
+  color: #004c95;
   text-align: center;
 }
