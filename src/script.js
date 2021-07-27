@@ -51,7 +51,7 @@ function alterDisplayWindows(response) {
   let humid = response.data.main.humidity;
   console.log(humid);
   let displayMyHumidity = document.querySelector("#humidity-read");
-  displayMyHumidity.innerHTML = `humidity: ${humid}`;
+  displayMyHumidity.innerHTML = `humidity: ${humid}%`;
 
   let wind = Math.round(response.data.wind.speed);
   console.log(wind);
@@ -113,7 +113,7 @@ function displayHometown(response) {
   let humid = response.data.main.humidity;
   console.log(humid);
   let displayMyHumidity = document.querySelector("#humidity-read");
-  displayMyHumidity.innerHTML = `humidity: ${humid}`;
+  displayMyHumidity.innerHTML = `humidity: ${humid}%`;
 
   let wind = Math.round(response.data.wind.speed);
   console.log(wind);

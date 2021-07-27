@@ -6,10 +6,22 @@ body {
 }
 
 h1 {
+  background: linear-gradient(
+    90.9deg,
+    rgb(255, 187, 187) -8.8%,
+    rgb(255, 220, 177) 12.4%,
+    rgb(255, 249, 177) 35.6%,
+    rgb(220, 255, 177) 59.6%,
+    rgb(177, 218, 255) 84%,
+    rgb(222, 177, 255) 107.9%
+  );
+  border-radius: 20px;
+  border: 2px solid #004c95;
   font-family: "Train One", cursive;
+  padding: 20px;
   color: #004c95;
   text-align: center;
-  font-size: 75px;
+  font-size: 59px;
 }
 
 hr {
@@ -36,6 +48,7 @@ hr {
 .container {
   border: 5px solid #29caff;
   border-radius: 20px;
+  padding: 5px;
 }
 
 p.weather-visual {
@@ -69,7 +82,8 @@ p.high-low {
 
 button.signature {
   color: #004c95;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 20px;
   display: block;
   margin: 0 auto;
   padding: 20px;
