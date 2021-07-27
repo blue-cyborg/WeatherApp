@@ -42,7 +42,6 @@ hr {
   background: #fffbef;
   border-radius: 15px;
   border: 5px solid #29caff;
-  padding: 10px 60px;
 }
 
 .container {
@@ -50,13 +49,35 @@ hr {
   border-radius: 20px;
   padding: 5px;
 }
-
+h2.description,
 p.weather-visual {
-  background: #fffbef;
+  background: linear-gradient(
+    89.9deg,
+    rgb(208, 246, 255) 0.1%,
+    rgb(255, 237, 237) 47.9%,
+    rgb(255, 255, 231) 100.2%
+  );
+}
+
+h2.description {
+  color: #004c95;
+  margin: 0;
+  text-align: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-top: 5px solid #29caff;
+  border-left: 5px solid #29caff;
+  border-right: 5px solid #29caff;
+}
+p.weather-visual {
   font-size: 167px;
   text-align: center;
-  border: 5px solid #29caff;
-  border-radius: 15px;
+  margin: 0;
+  border-left: 5px solid #29caff;
+  border-right: 5px solid #29caff;
+  border-bottom: 5px solid #29caff;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 p.forecast-visual {
@@ -73,11 +94,11 @@ p.forecast-visual {
 }
 
 h3.day {
-  font-size: 45px;
+  font-size: 32px;
 }
 
 p.high-low {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 button.signature {
@@ -99,7 +120,10 @@ button.signature {
 
 #city-name,
 #wind-read,
+#precip-read,
+#feel-read,
 #humidity-read,
+#unit,
 #read-out {
   color: #004c95;
   background: linear-gradient(
@@ -120,8 +144,11 @@ button.signature {
   border-right: 5px solid #29caff;
 }
 
+#precip-read,
+#feel-read,
 #wind-read,
-#humidity-read {
+#humidity-read,
+#unit {
   border-left: 5px solid #29caff;
   border-right: 5px solid #29caff;
   color: #004c95;

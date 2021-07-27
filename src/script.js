@@ -1,4 +1,6 @@
-//This is for putting the current date and time in the gradient display.
+//This is for putting the current date and time outside the gradient display.
+let apiKey = "63b79185d21891dc86fad86aa0ab0b0b";
+
 let now = new Date();
 
 let days = [
@@ -51,12 +53,24 @@ function alterDisplayWindows(response) {
   let humid = response.data.main.humidity;
   console.log(humid);
   let displayMyHumidity = document.querySelector("#humidity-read");
-  displayMyHumidity.innerHTML = `humidity: ${humid}%`;
+  displayMyHumidity.innerHTML = `Humidity: ${humid}%`;
 
+  let precipitation = Math.round(response.data.main.temp);
+  let currentPrec = document.querySelector("#precip-read");
+  currentPrec.innerHTML = `Precipitation: ${precipitation}%`;
+  
   let wind = Math.round(response.data.wind.speed);
   console.log(wind);
   let displayMyWindsp = document.querySelector("#wind-read");
-  displayMyWindsp.innerHTML = `wind speed: ${wind} km/h`;
+  displayMyWindsp.innerHTML = `Wind Speed: ${wind} km/h`;
+
+  let feel = Math.round(response.data.main.feels_like);
+  let feelValue = document.querySelector("#feel-read");
+  feelValue.innerHTML = `It feels like ${feel}°F`;
+
+  let description = response.data.weather[0].main;
+  let describeWeather = document.querySelector("#describe-read");
+  describeWeather.innerHTML = `Currently: ${description}`;
 
   let locationVisual = document.querySelector("p.weather-visual");
   if (response.data.weather[0].main === "Clear") {
@@ -87,7 +101,6 @@ function searchEngine(event) {
   let endUserInput = document.querySelector("#city-input");
   let cityDisplay = document.querySelector("#city-name");
   cityDisplay.innerHTML = `${endUserInput.value}`;
-  let apiKey = "63b79185d21891dc86fad86aa0ab0b0b";
   let city = endUserInput.value;
   let units = "imperial";
   let apiUrlSearch = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
@@ -101,54 +114,11 @@ searchButton.addEventListener("submit", searchEngine);
 //end search engine button info
 
 //The My Current Location Button
-function displayHometown(response) {
-  let lonLatTemp = document.querySelector("#read-out");
-  let temperature = Math.round(response.data.main.temp);
-  let yourLocation = `${response.data.name}`;
-  lonLatTemp.innerHTML = `${temperature}°F`;
-
-  let geoCity = document.querySelector("#city-name");
-  geoCity.innerHTML = `${yourLocation}`;
-
-  let humid = response.data.main.humidity;
-  console.log(humid);
-  let displayMyHumidity = document.querySelector("#humidity-read");
-  displayMyHumidity.innerHTML = `humidity: ${humid}%`;
-
-  let wind = Math.round(response.data.wind.speed);
-  console.log(wind);
-  let displayMyWindsp = document.querySelector("#wind-read");
-  displayMyWindsp.innerHTML = `wind speed: ${wind} km/h`;
-
-  let currentConditions = document.querySelector("p.weather-visual");
-  currentConditions.innerHTML = response.data.weather.description;
-
-  if (response.data.weather[0].main === "Clear") {
-    currentConditions.innerHTML = "🌞";
-  }
-  if (response.data.weather[0].main === "Clouds") {
-    currentConditions.innerHTML = "⛅";
-  }
-  if (response.data.weather[0].main === "Drizzle") {
-    currentConditions.innerHTML = "☂️";
-  }
-  if (response.data.weather[0].main === "Thunderstorm") {
-    currentConditions.innerHTML = "⛈️";
-  }
-  if (response.data.weather[0].main === "Rain") {
-    currentConditions.innerHTML = "☂️";
-  }
-  if (response.data.weather[0].main === "Snow") {
-    currentConditions.innerHTML = "❄️";
-  }
-}
-
 function retrievePosition(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
-  let apiKey = "63b79185d21891dc86fad86aa0ab0b0b";
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
-  axios.get(url).then(displayHometown);
+  axios.get(url).then(alterDisplayWindows);
 }
 function getMyLocation() {
   navigator.geolocation.getCurrentPosition(retrievePosition);
