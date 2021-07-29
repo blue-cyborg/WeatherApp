@@ -119,11 +119,11 @@ button.signature {
 }
 
 #city-name,
+h3.unit-select,
 #wind-read,
 #precip-read,
 #feel-read,
 #humidity-read,
-#unit,
 #read-out {
   color: #004c95;
   background: linear-gradient(
@@ -148,13 +148,13 @@ button.signature {
 #feel-read,
 #wind-read,
 #humidity-read,
-#unit {
+h3.unit-select {
   border-left: 5px solid #29caff;
   border-right: 5px solid #29caff;
   color: #004c95;
 }
 
-#read-out {
+p.temp-read {
   border-left: 5px solid #29caff;
   border-right: 5px solid #29caff;
   border-bottom: 5px solid #29caff;
@@ -165,7 +165,7 @@ button.signature {
 }
 
 h3.permanent-lead,
-#current-data {
+h3.current-time {
   color: #004c95;
   text-align: center;
 }
