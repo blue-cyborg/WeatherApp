@@ -127,6 +127,3 @@ function getMyLocation() {
 let currentLocation = document.querySelector("#your-location");
 currentLocation.addEventListener("click", getMyLocation);
 //end of geolocation section
-
-
-//C and F selectors

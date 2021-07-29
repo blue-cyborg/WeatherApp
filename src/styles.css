@@ -1,7 +1,7 @@
 body {
-  max-width: 900px;
   background: #fffbef;
   margin: 0 auto;
+  max-width: 900px;
   padding: 15px 60px;
 }
 
@@ -15,21 +15,17 @@ h1 {
     rgb(177, 218, 255) 84%,
     rgb(222, 177, 255) 107.9%
   );
-  border-radius: 20px;
   border: 2px solid #004c95;
-  font-family: "Train One", cursive;
-  padding: 20px;
+  border-radius: 20px;
   color: #004c95;
-  text-align: center;
+  font-family: "Train One", cursive;
   font-size: 59px;
+  padding: 20px;
+  text-align: center;
 }
 
 hr {
   border: 3px solid #0074e4;
-}
-
-.col {
-  max-width: 750px;
 }
 
 .card {
@@ -40,8 +36,34 @@ hr {
 
 .card1 {
   background: #fffbef;
-  border-radius: 15px;
   border: 5px solid #29caff;
+  border-radius: 15px;
+}
+
+.city {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-top: 5px solid #29caff;
+  border-left: 5px solid #29caff;
+  border-right: 5px solid #29caff;
+}
+
+.city,
+.feel,
+.humid,
+.precip,
+.temp-read,
+.unit-select,
+.wind {
+  background: linear-gradient(
+    89.9deg,
+    rgb(208, 246, 255) 0.1%,
+    rgb(255, 237, 237) 47.9%,
+    rgb(255, 255, 231) 100.2%
+  );
+  color: #004c95;
+  margin: 0;
+  text-align: center;
 }
 
 .container {
@@ -49,112 +71,87 @@ hr {
   border-radius: 20px;
   padding: 5px;
 }
-h2.description,
-p.weather-visual {
-  background: linear-gradient(
-    89.9deg,
-    rgb(208, 246, 255) 0.1%,
-    rgb(255, 237, 237) 47.9%,
-    rgb(255, 255, 231) 100.2%
-  );
+
+.col {
+  max-width: 750px;
 }
 
-h2.description {
+.current-time,
+.permanent-lead {
   color: #004c95;
-  margin: 0;
   text-align: center;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border-top: 5px solid #29caff;
-  border-left: 5px solid #29caff;
-  border-right: 5px solid #29caff;
-}
-p.weather-visual {
-  font-size: 167px;
-  text-align: center;
-  margin: 0;
-  border-left: 5px solid #29caff;
-  border-right: 5px solid #29caff;
-  border-bottom: 5px solid #29caff;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
 }
 
-p.forecast-visual {
-  margin: 0 auto;
-  background: #fffbef;
-  font-size: 77px;
-}
-
-h3.day,
-p.high-low,
-p.forecast-visual {
-  text-align: center;
-  color: #004c95;
-}
-
-h3.day {
+.day {
   font-size: 32px;
 }
 
-p.high-low {
-  font-size: 25px;
-}
-
-button.signature {
+.day,
+.forecast-visual,
+.high-low {
   color: #004c95;
-  font-weight: 700;
-  font-size: 20px;
-  display: block;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 15px;
-  border: 5px solid #29caff;
-  background: linear-gradient(
-    89.9deg,
-    rgb(208, 246, 255) 0.1%,
-    rgb(255, 237, 237) 47.9%,
-    rgb(255, 255, 231) 100.2%
-  );
-}
-
-#city-name,
-h3.unit-select,
-#wind-read,
-#precip-read,
-#feel-read,
-#humidity-read,
-#read-out {
-  color: #004c95;
-  background: linear-gradient(
-    89.9deg,
-    rgb(208, 246, 255) 0.1%,
-    rgb(255, 237, 237) 47.9%,
-    rgb(255, 255, 231) 100.2%
-  );
-  margin: 0;
   text-align: center;
 }
 
-#city-name {
+.description {
+  color: #004c95;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   border-top: 5px solid #29caff;
   border-left: 5px solid #29caff;
   border-right: 5px solid #29caff;
+  margin: 0;
+  text-align: center;
 }
 
-#precip-read,
-#feel-read,
-#wind-read,
-#humidity-read,
-h3.unit-select {
+.description,
+.weather-visual {
+  background: linear-gradient(
+    89.9deg,
+    rgb(208, 246, 255) 0.1%,
+    rgb(255, 237, 237) 47.9%,
+    rgb(255, 255, 231) 100.2%
+  );
+}
+
+.feel,
+.humid,
+.precip,
+.unit-select,
+.wind {
   border-left: 5px solid #29caff;
   border-right: 5px solid #29caff;
   color: #004c95;
 }
 
-p.temp-read {
+.forecast-visual {
+  background: #fffbef;
+  font-size: 77px;
+  margin: 0 auto;
+}
+
+.high-low {
+  font-size: 25px;
+}
+
+.signature {
+  background: linear-gradient(
+    89.9deg,
+    rgb(208, 246, 255) 0.1%,
+    rgb(255, 237, 237) 47.9%,
+    rgb(255, 255, 231) 100.2%
+  );
+  border: 5px solid #29caff;
+  border-radius: 15px;
+  color: #004c95;
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.temp-read {
   border-left: 5px solid #29caff;
   border-right: 5px solid #29caff;
   border-bottom: 5px solid #29caff;
@@ -164,8 +161,13 @@ p.temp-read {
   font-size: 100px;
 }
 
-h3.permanent-lead,
-h3.current-time {
-  color: #004c95;
+.weather-visual {
+  border-left: 5px solid #29caff;
+  border-right: 5px solid #29caff;
+  border-bottom: 5px solid #29caff;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-size: 167px;
+  margin: 0;
   text-align: center;
 }
