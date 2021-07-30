@@ -82,22 +82,21 @@ function handleSubmit(event) {
 
 search("Rochester");
 
-let form = document.querySelector("#search-city");
-form.addEventListener("submit", handleSubmit);
-//end search engine section//
-
-//geolocation section//
 function retrievePosition(position) {
+
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   let apiKey = "63b79185d21891dc86fad86aa0ab0b0b";
   let urlPosition = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
   axios.get(urlPosition).then(displayTemperature);
 }
-function getMyLocation() {
+function fetchPosition(event) {
+  event.preventDefault()
   navigator.geolocation.getCurrentPosition(retrievePosition);
 }
 
 let currentLocation = document.querySelector("#your-location");
-currentLocation.addEventListener("click", getMyLocation);
-//end geolocation section//
+currentLocation.addEventListener("click", fetchPosition);
+
+let form = document.querySelector("#search-city");
+form.addEventListener("submit", handleSubmit);
