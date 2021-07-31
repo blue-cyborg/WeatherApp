@@ -80,9 +80,7 @@ function handleSubmit(event) {
   search(cityInputElement.value)
 }
 
-search("Rochester");
-
-function retrievePosition(position) {
+function fetchCurrent(position) {
 
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
@@ -90,13 +88,15 @@ function retrievePosition(position) {
   let urlPosition = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
   axios.get(urlPosition).then(displayTemperature);
 }
-function fetchPosition(event) {
+function retrievePosition(event) {
   event.preventDefault()
-  navigator.geolocation.getCurrentPosition(retrievePosition);
+  navigator.geolocation.getCurrentPosition(fetchCurrent);
 }
 
-let currentLocation = document.querySelector("#your-location");
-currentLocation.addEventListener("click", fetchPosition);
+let fetchCurrentData = document.querySelector("#your-location");
+fetchCurrentData.addEventListener("click", retrievePosition);
 
 let form = document.querySelector("#search-city");
 form.addEventListener("submit", handleSubmit);
+
+search("Rochester");

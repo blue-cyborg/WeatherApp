@@ -24,27 +24,35 @@
             id="city-input"
             placeholder="Enter your city or zip code" 
             class="form-control" 
-            autofocus 
+            autofocus
+            autocomplete="off"
             />
           <input type="submit" value="Search" class="btn btn-primary" />
           <button type="button" id="your-location" class="btn btn-warning">📍 My Current Location</button>
          </form>
-     <br />
-     <br /> 
-     <h3 class="permanent-lead">
-       Your current date and time is
-     </h3>
-     <h3 class="current-time" 
-     id="current-data">
-      .
-     </h3> 
-      <div class="row">
-       <div class="col">
-         <h2 class="city" 
+         <br />
+         <br /> 
+      <h2 class="city" 
          id="city-name">
           Tell me your city
          </h2>
-         <h3 class="humid"
+         <div class="row">
+    <div class="col">
+       <h2 class="description" 
+        id="describe-read">
+         Current description
+         </h2>
+                <img 
+         src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+         class="weather-visual"
+         id="representation"
+         width="200"
+         height="200"
+        />
+       
+    </div>
+    <div class="col">
+       <h3 class="humid"
          id="humidity-read">
           Humidity: 
          </h3>
@@ -58,8 +66,10 @@
         </h3>
         <h3 class="feel"
         id="feel-read">
-         It feels like °F
+         It feels like: °F
         </h3>
+    </div>
+    <div class="col">
         <h3 class="unit-select">
         <a href="#" 
         id="fTemp">°F</a>|<a
@@ -69,23 +79,18 @@
           </h3>
         <p class="temp-read" id="read-out">
           °F
-        </p>
-      </div>
+        </p>   
     </div>
-      <br />
-      <div class="col">
-         <h2 class="description" 
-         id="describe-read">
-          Current description
-         </h2>
-         <img 
-         src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-         class="weather-visual"
-         id="representation"
-        />
-        <br />
+  </div>
      </div>
-    </div>
+     <h3 class="permanent-lead">
+       Your current date and time is
+     </h3>
+     <h3 class="current-time" 
+     id="current-data">
+      .
+     </h3> 
+    <br />
     <hr />
       <div class="card1">
         <div class="card-body">

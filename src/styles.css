@@ -1,7 +1,7 @@
 body {
   background: #fffbef;
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 950px;
   padding: 15px 60px;
 }
 
@@ -31,7 +31,6 @@ hr {
 .card {
   background: #e5ffe5;
   border-radius: 20px;
-  padding: 10px 60px;
 }
 
 .card1 {
@@ -41,28 +40,6 @@ hr {
 }
 
 .city {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border-top: 5px solid #29caff;
-  border-left: 5px solid #29caff;
-  border-right: 5px solid #29caff;
-}
-
-.city,
-.feel,
-.humid,
-.precip,
-.temp-read,
-.unit-select,
-.wind {
-  background: linear-gradient(
-    89.9deg,
-    rgb(208, 246, 255) 0.1%,
-    rgb(255, 237, 237) 47.9%,
-    rgb(255, 255, 231) 100.2%
-  );
-  color: #004c95;
-  margin: 0;
   text-align: center;
 }
 
@@ -72,66 +49,10 @@ hr {
   padding: 5px;
 }
 
-.col {
-  max-width: 750px;
-}
-
 .current-time,
 .permanent-lead {
   color: #004c95;
   text-align: center;
-}
-
-.day {
-  font-size: 32px;
-}
-
-.day,
-.forecast-visual,
-.high-low {
-  color: #004c95;
-  text-align: center;
-}
-
-.description {
-  color: #004c95;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border-top: 5px solid #29caff;
-  border-left: 5px solid #29caff;
-  border-right: 5px solid #29caff;
-  margin: 0;
-  text-align: center;
-}
-
-.description,
-.weather-visual {
-  background: linear-gradient(
-    89.9deg,
-    rgb(208, 246, 255) 0.1%,
-    rgb(255, 237, 237) 47.9%,
-    rgb(255, 255, 231) 100.2%
-  );
-}
-
-.feel,
-.humid,
-.precip,
-.unit-select,
-.wind {
-  border-left: 5px solid #29caff;
-  border-right: 5px solid #29caff;
-  color: #004c95;
-}
-
-.forecast-visual {
-  background: #fffbef;
-  font-size: 77px;
-  margin: 0 auto;
-}
-
-.high-low {
-  font-size: 25px;
 }
 
 .signature {
@@ -152,22 +73,6 @@ hr {
 }
 
 .temp-read {
-  border-left: 5px solid #29caff;
-  border-right: 5px solid #29caff;
-  border-bottom: 5px solid #29caff;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
   font-family: "Train One", cursive;
   font-size: 100px;
-}
-
-.weather-visual {
-  border-left: 5px solid #29caff;
-  border-right: 5px solid #29caff;
-  border-bottom: 5px solid #29caff;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  display: block;
-  font-size: 167px;
-  margin: 0 auto;
 }
