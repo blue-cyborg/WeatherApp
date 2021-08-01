@@ -40,6 +40,8 @@ hr {
 }
 
 .city {
+  color: #004c95;
+  font-size: 45px;
   text-align: center;
 }
 
@@ -52,6 +54,18 @@ hr {
 .current-time,
 .permanent-lead {
   color: #004c95;
+  text-align: center;
+}
+
+.description,
+.feel,
+.humid,
+.precip,
+.unit-select,
+.wind {
+  background: rgb(208, 246, 255) 0.1%;
+  color: #004c95;
+  margin: 0;
   text-align: center;
 }
 
@@ -73,6 +87,12 @@ hr {
 }
 
 .temp-read {
+  color: #004c95;
   font-family: "Train One", cursive;
-  font-size: 100px;
+  font-size: 87px;
+  text-align: center;
+}
+.weather-visual {
+  display: block;
+  margin: 0 auto;
 }
