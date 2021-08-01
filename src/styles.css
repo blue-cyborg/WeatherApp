@@ -41,6 +41,7 @@ hr {
 
 .city {
   color: #004c95;
+  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
   font-size: 45px;
   text-align: center;
 }
@@ -54,7 +55,14 @@ hr {
 .current-time,
 .permanent-lead {
   color: #004c95;
+  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
   text-align: center;
+}
+
+.description {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-top: 5px solid #29caff;
 }
 
 .description,
@@ -65,8 +73,11 @@ hr {
 .wind {
   background: rgb(208, 246, 255) 0.1%;
   color: #004c95;
+  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
   margin: 0;
   text-align: center;
+  border-left: 5px solid #29caff;
+  border-right: 5px solid #29caff;
 }
 
 .signature {
@@ -92,6 +103,13 @@ hr {
   font-size: 87px;
   text-align: center;
 }
+
+.unit-select {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom: 5px solid #29caff;
+}
+
 .weather-visual {
   display: block;
   margin: 0 auto;
