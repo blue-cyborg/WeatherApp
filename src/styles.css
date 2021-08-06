@@ -41,8 +41,8 @@ hr {
 
 .city {
   color: #004c95;
-  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
   font-size: 45px;
+  font-weight: 900;
   text-align: center;
 }
 
@@ -55,7 +55,7 @@ hr {
 .current-time,
 .permanent-lead {
   color: #004c95;
-  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+  font-weight: 900;
   text-align: center;
 }
 
@@ -73,7 +73,7 @@ hr {
 .wind {
   background: rgb(208, 246, 255) 0.1%;
   color: #004c95;
-  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+  font-weight: 900;
   margin: 0;
   text-align: center;
   border-left: 5px solid #29caff;
