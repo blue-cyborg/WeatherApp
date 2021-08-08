@@ -33,12 +33,6 @@ hr {
   border-radius: 20px;
 }
 
-.card1 {
-  background: #fffbef;
-  border: 5px solid #29caff;
-  border-radius: 15px;
-}
-
 .city {
   color: #004c95;
   font-size: 45px;
@@ -111,13 +105,14 @@ hr {
 }
 
 .weather-forcast {
-  margin-top: 20px;
   text-align: center;
+  margin-top: 50px;
   color: #004c95;
 }
 
 .weather-forcast-date {
-  font-size: 50px;
+  font-size: 40px;
+  font-weight: 500;
 }
 
 .weather-forecast-temperature-min {
@@ -126,6 +121,7 @@ hr {
 
 .weather-forecast-temperatures {
   font-size: 25px;
+  font-weight: 500;
 }
 
 .weather-visual {

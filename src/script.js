@@ -36,6 +36,36 @@ let time = date.toLocaleTimeString("en-US", {
 });
 return `${day}, ${currentMonth} ${currentDate} ${currentYear}, ${time}`;
 }
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function(day){
+    forecastHTML = forecastHTML + 
+    `
+     <div class="col-2">
+      <div class="weather-forcast-date">${day}</div>
+        <img
+         src="http://openweathermap.org/img/wn/50d@2x.png"
+         alt=""
+         width="65"
+        />
+        <div class="weather-forecast-temperatures">
+          <span class="weather-forecast-temperature-max"> 18° </
+          span>
+          <span class="weather-forecast-temperature-min"> 12° </
+          span>
+        </div>
+      </div>
+      `;
+})
+
+forecastHTML = forecastHTML+`</div>`
+forecastElement.innerHTML = forecastHTML;
+
+}
 //search engine and display infor//
 function displayTemperature(response) {
  let cityElement = document.querySelector("#city-name");
@@ -112,7 +142,6 @@ function cToF(event){
 
 let farenheitTemp = null;
 
-
 let fetchCurrentData = document.querySelector("#your-location");
 fetchCurrentData.addEventListener("click", retrievePosition);
 
@@ -126,3 +155,4 @@ let cTempLink = document.querySelector("#cTemp");
 cTempLink.addEventListener("click", fToC);
 
 search("Rochester");
+displayForecast();
