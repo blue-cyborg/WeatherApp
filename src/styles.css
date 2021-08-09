@@ -31,8 +31,8 @@ h1 {
 
 .city {
   color: #004c95;
+  font-family: "Alfa Slab One", cursive;
   font-size: 45px;
-  font-weight: 900;
   text-align: center;
 }
 
@@ -45,7 +45,7 @@ h1 {
 .current-time,
 .permanent-lead {
   color: #004c95;
-  font-weight: 900;
+  font-family: "Alfa Slab One", cursive;
   text-align: center;
 }
 
@@ -63,9 +63,11 @@ h1 {
 .wind {
   background: rgb(208, 246, 255) 0.1%;
   color: #004c95;
-  font-weight: 900;
+  font-family: "Alfa Slab One", cursive;
+  font-size: 25px;
   margin: 0;
   text-align: center;
+  list-style: none;
   border-left: 5px solid #29caff;
   border-right: 5px solid #29caff;
 }
@@ -102,6 +104,7 @@ h1 {
 
 .weather-forcast {
   color: #004c95;
+  font-family: "Alfa Slab One", cursive;
   text-align: center;
   margin: 40px 0;
   padding-bottom: 40px;
