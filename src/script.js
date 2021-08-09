@@ -37,7 +37,8 @@ let time = date.toLocaleTimeString("en-US", {
 return `${day}, ${currentMonth} ${currentDate} ${currentYear}, ${time}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -64,8 +65,16 @@ function displayForecast() {
 
 forecastHTML = forecastHTML+`</div>`
 forecastElement.innerHTML = forecastHTML;
-
 }
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "63b79185d21891dc86fad86aa0ab0b0b";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
+
 //search engine and display infor//
 function displayTemperature(response) {
  let cityElement = document.querySelector("#city-name");
@@ -98,6 +107,8 @@ function displayTemperature(response) {
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  getForecast(response.data.coord)
 }
 
 function search(city) {
@@ -155,4 +166,3 @@ let cTempLink = document.querySelector("#cTemp");
 cTempLink.addEventListener("click", fToC);
 
 search("Rochester");
-displayForecast();
