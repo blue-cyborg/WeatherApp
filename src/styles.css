@@ -67,6 +67,7 @@ h1 {
   font-size: 20px;
   margin: 0;
   text-align: center;
+  padding: 7px;
   list-style: none;
   border-left: 5px solid #29caff;
   border-right: 5px solid #29caff;
@@ -120,7 +121,7 @@ h1 {
 }
 
 .weather-forecast-temperatures {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 500;
 }
 
