@@ -146,22 +146,6 @@ function retrievePosition(event) {
   navigator.geolocation.getCurrentPosition(fetchCurrent);
 }
 
-function fToC(event){
-  event.preventDefault();
-  let celsiusTemperature = (5/9)*((farenheitTemp)-32);
-  let consiseCelsius = Math.round(celsiusTemperature);
-  let conversion = document.querySelector("#read-out");
-  conversion.innerHTML = `${consiseCelsius}°C`;
-}
-
-function cToF(event){
-  event.preventDefault();
-  let fAgain = Math.round(farenheitTemp);
-  let revert = document.querySelector("#read-out");
-  revert.innerHTML = `${fAgain}°F`;
-}
-
-let farenheitTemp = null;
 
 let fetchCurrentData = document.querySelector("#your-location");
 fetchCurrentData.addEventListener("click", retrievePosition);
@@ -169,10 +153,7 @@ fetchCurrentData.addEventListener("click", retrievePosition);
 let form = document.querySelector("#search-city");
 form.addEventListener("submit", handleSubmit);
 
-let fTempLink = document.querySelector("#fTemp");
-fTempLink.addEventListener("click", cToF);
 
-let cTempLink = document.querySelector("#cTemp");
-cTempLink.addEventListener("click", fToC);
+
 
 search("Rochester");
