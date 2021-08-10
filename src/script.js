@@ -34,7 +34,7 @@ let time = date.toLocaleTimeString("en-US", {
   hour: "2-digit",
   minute: "2-digit"
 });
-return `${day}, ${currentMonth} ${currentDate} ${currentYear}, ${time}`;
+return `Last Updated: ${day}, ${currentMonth} ${currentDate} ${currentYear}, ${time}`;
 }
 
 function formatDay(timestamp) {
