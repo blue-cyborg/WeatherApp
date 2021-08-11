@@ -60,7 +60,6 @@ h1 {
 .feel,
 .humid,
 .precip,
-.unit-select,
 .wind {
   background: rgb(208, 246, 255) 0.1%;
   color: #004c95;
@@ -74,21 +73,25 @@ h1 {
   border-right: 5px solid #29caff;
 }
 
+.feel {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom: 5px solid #29caff;
+}
+
 .signature {
-  background: linear-gradient(
-    89.9deg,
-    rgb(208, 246, 255) 0.1%,
-    rgb(255, 237, 237) 47.9%,
-    rgb(255, 255, 231) 100.2%
-  );
+  background: linear-gradient(120deg, #ede6f5 0%, #cde2f8 100%);
   border: 5px solid #29caff;
-  border-radius: 15px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   color: #004c95;
   display: block;
-  font-weight: 700;
-  font-size: 20px;
+  font-family: "Alfa Slab One", cursive;
+  font-size: 15px;
   margin: 0 auto;
   padding: 20px;
+  text-align: center;
+  width: 400px;
 }
 
 .temp-read {
@@ -96,12 +99,6 @@ h1 {
   font-family: "Train One", cursive;
   font-size: 87px;
   text-align: center;
-}
-
-.feel {
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-bottom: 5px solid #29caff;
 }
 
 .weather-forcast {

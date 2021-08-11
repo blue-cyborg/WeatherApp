@@ -153,7 +153,4 @@ fetchCurrentData.addEventListener("click", retrievePosition);
 let form = document.querySelector("#search-city");
 form.addEventListener("submit", handleSubmit);
 
-
-
-
 search("Rochester");
